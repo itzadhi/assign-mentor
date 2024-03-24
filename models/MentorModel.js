@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const studentSchema = mongoose.Schema(
+const mentorSchema = mongoose.Schema(
   {
     name: {
       type: String,
@@ -11,7 +11,7 @@ const studentSchema = mongoose.Schema(
       required: true,
       unique: true,
     },
-    assignedMentor: {
+    assignedStudents: {
       type: Array,
     },
   },
@@ -20,6 +20,6 @@ const studentSchema = mongoose.Schema(
   }
 );
 
-const Student = mongoose.model('Student', studentSchema);
+const Mentor = mongoose.model('Mentor', mentorSchema);
 
-export default Student;
+export default Mentor;
